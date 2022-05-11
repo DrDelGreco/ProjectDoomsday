@@ -74,3 +74,5 @@ end
 #bootstrap
 
 gem 'bootstrap-sass'
+
+gem 'font-awesome-sass', '~> 5.15', '>= 5.15.1'
