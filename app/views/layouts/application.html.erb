@@ -5,6 +5,10 @@
 
  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wdth,wght@93.4,584;100,400;100,700&display=swap" rel="stylesheet">
+
  <!-- original source code from where I got the favicon
 
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -22,6 +26,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
 
 
 
@@ -43,17 +48,25 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><i class="fa fa-bomb"></i> Project Doomsday</a>
+        <%= link_to root_path, class: "navbar-brand" do %>
+        <i class="fa fa-bomb"></i> Project Doomsday
+        <% end %>
+      
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="dash">Dashboard<span class="sr-only">(current)</span></a></li>
-        <li><a href="/about">About Us</a></li>
+
+        <!-- 
+        <li class="active"><a href="dash">Dashboard <span class="sr-only">(current)</span></a></li>
+        -->
+
+        <li><%= link_to "About Us", about_path %></li>
+        
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Current Projects<span class="caret"></span></a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu">  
             <li><a href="debris.html">Retrieving Space Debris</a></li>
             <li><a href="bomb.html">Planetary Destruction</a></li>
             
@@ -91,9 +104,8 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-    <div class="container">
+  
       <%= yield %>
-   </div>
 
 </body>
 </html>

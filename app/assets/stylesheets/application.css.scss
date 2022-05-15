@@ -24,8 +24,32 @@
 body, .navbar {background: #abbaab;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 0;
     }
 
-.navbar {border: none;}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a 
+    {color:rgb(6, 79, 23);
+        &:hover {
+            color:rgb(6, 79, 23); opacity: 0.25;
+        }
+    }
 
-.jumbotron {background:rgb(75, 120, 75); color: white}
+    .navbar-brand, .navbar-nav {
+        font-family: 'Radio Canada', sans-serif;
+        font-weight: 800;
+      }
+
+      .navbar-default .navbar-toggle .icon-bar {
+        background-color: white;
+      }
+
+      .navbar-default .navbar-toggle {
+        border: 2px solid white;
+        &:hover, &:focus {
+          background-color: rgb(6, 79, 23);
+        }
+      }
+
+
+.jumbotron {background:rgb(75, 120, 75); color: white;}
