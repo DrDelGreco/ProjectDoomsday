@@ -88,3 +88,6 @@ gem 'font-awesome-sass', '~> 5.15', '>= 5.15.1'
 gem 'hirb'
 
 gem 'jquery-rails'
+
+#use devise for user authentication
+gem 'devise'
