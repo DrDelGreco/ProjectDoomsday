@@ -1,18 +1,39 @@
 <div class="jumbotron">
  
-    <h1><i class="fa fa-users"></i> Project Doomsday</h1>
-    <p>End the World Today</p>
-    <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more</a></p>
+    <h1 class="text-center"><i class="fa fa-users"></i> Project Doomsday</h1>
+    <p class="text-center">End the World Today &nbsp; &nbsp; &nbsp; &nbsp; <a class="btn btn-primary btn-lg" href="/about" role="button">Learn more</a></p>
  
 </div>
 
-<h1>Unite To End The World</h1>
-
+<div class="container">
+    <h1>Unite To End The World</h1>
 
     <p>Welcome to the official homepage of Project Doomsday. <br><br>
     We're currently still building the support infrastructure for devoted individuals across the globe to use this platform 
      to plot Planetary Destruction. Keep your eye on this space for future developments about how to end the future.</p>
 
      <p>To learn more about Project Doomsday and our mission to end the world, <%= link_to "click here", about_path %>.</p>
+</div>
+
+<div class="container home-signup-links">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="well">
+            <h2 class="text-center">Basic Membership</h2>
+            <h4>Sign-up for free and get basic access to the community.</h4>
+            <br>
+            <%= link_to "Sign-up with Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="well">
+            <h2 class="text-center">Pro Membership</h2>
+            <h4>For $10 a month you can support planetary destruction AND get access to premium content.</h4>
+            
+            <%= link_to "Sign-up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+            </div>
+        </div>
+    </div>
+</div>
 
  
