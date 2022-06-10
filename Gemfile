@@ -91,3 +91,9 @@ gem 'jquery-rails'
 
 #use devise for user authentication
 gem 'devise'
+
+#use stripe for payments
+gem 'stripe'
+
+#use  figaro for ENV variables
+gem 'figaro'
