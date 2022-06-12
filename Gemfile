@@ -38,7 +38,6 @@ gem "jbuilder"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
-
 group :production do
 #Use postgres on heroku servers when in production mode (that when the site is live)
  gem 'pg'
@@ -80,7 +79,6 @@ group :test do
 end
 
 #bootstrap
-
 gem 'bootstrap-sass'
 
 gem 'font-awesome-sass', '~> 5.15', '>= 5.15.1'
