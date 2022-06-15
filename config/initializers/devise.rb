@@ -265,6 +265,10 @@ Devise.setup do |config|
   # The "*/*" below is required to match Internet Explorer requests.
   # config.navigational_formats = ['*/*', :html]
 
+  # Added this on 6/15/22 based on googling, trying to resolve an error
+  config.navigational_formats = ['*/*', :html, :turbo_stream]
+
+
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
 

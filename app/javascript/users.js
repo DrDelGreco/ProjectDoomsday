@@ -1,9 +1,9 @@
 /* global $, Stripe */
 // Document ready
-$(document).on('turbolinks:load', function(){
+$(document).on('turbo-rails:load', function(){
     
     var theForm = $('#pro_form');
-    var submitBtn = $('#form-submit-btn');
+    var submitBtn = $('#form-signup-btn');
     
     //Set Stripe Public Key
     Stripe.setPublishableKey( $('meta[name="stripe-key"]').attr('content') );
