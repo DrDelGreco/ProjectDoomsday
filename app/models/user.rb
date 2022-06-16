@@ -8,7 +8,12 @@ class User < ApplicationRecord
   attr_accessor :stripe_card_token
   def save_with_subscription
     if valid?
-      customer = Stripe::Customer.create(description: email, plan: plan_id, card: stripe_card_token)
+      #  Here is the original line, After days of fighting it, I can make things work by taking out the plan: plan_id
+      #  customer = Stripe::Customer.create(description: email, plan: plan_id, card: stripe_card_token)
+      # I think this 2016 version of Stripes acceptable parameters is too different from today's
+      # See documentation, now Stripe has products, prices, and plans, but also the id system seems to be gone now 
+      
+      customer = Stripe::Customer.create(description: email, card: stripe_card_token)
       self.stripe_customer_token = customer.id
       save!
     end
