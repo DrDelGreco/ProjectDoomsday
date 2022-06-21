@@ -6,6 +6,8 @@ class User < ApplicationRecord
   belongs_to :plan
 
   attr_accessor :stripe_card_token
+  #If pro user passes validations then call Stripe and have it set up a subscription after charging customers card
+  #stripe responds back wit customer data, and we save customer.id as the customer token
   def save_with_subscription
     if valid?
       #  Here is the original line, After days of fighting it, I can make things work by taking out the plan: plan_id
