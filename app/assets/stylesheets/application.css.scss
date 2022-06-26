@@ -54,6 +54,16 @@ body, .navbar {background: #abbaab;  /* fallback for old browsers */
 
 .jumbotron {background:rgb(75, 120, 75); color: white;}
 
-.alert-notice {display: none;}
+.flash-container {
+  position: absolute;
+  width: 100%;
+}
+
+.alert-notice {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+  margin-top: -14px;
+}
 
 .home-signup-links {margin-top: 30px;}

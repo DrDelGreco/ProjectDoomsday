@@ -3,6 +3,8 @@
   <head>
     <title>Project Doomsday</title>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
  <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,7 +114,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container">  
+<div class="container flash-container">  
   <% flash.each do |type, msg| %>
    <%= content_tag :div, msg, class: "alert alert-#{type}" %>
   <% end %>
